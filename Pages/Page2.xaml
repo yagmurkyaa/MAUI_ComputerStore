@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Yagmur_180201028.Page2"
+             BackgroundColor="Red">
+
+    <VerticalStackLayout>
+        <VerticalStackLayout BackgroundColor="White" Margin="20">
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <VerticalStackLayout RadioButtonGroup.GroupName="cpu">
+                    <Label Text="CPU" TextColor="Black" HorizontalOptions="Center"/>
+                    <RadioButton Content="Core i3" CheckedChanged="RadioButtons_CheckedChanged"/>
+                    <RadioButton Content="Core i5" CheckedChanged="RadioButtons_CheckedChanged"/>
+                    <RadioButton Content="Core i7" CheckedChanged="RadioButtons_CheckedChanged"/>
+                    <RadioButton Content="Core i9" CheckedChanged="RadioButtons_CheckedChanged"/>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout RadioButtonGroup.GroupName="storage" >
+                    <Label Text="Storage" TextColor="Black" HorizontalOptions="Center"/>
+                    <RadioButton Content="SSD" CheckedChanged="RadioButtons2_CheckedChanged"/>
+                    <RadioButton Content="HDD" CheckedChanged="RadioButtons2_CheckedChanged"/>
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+
+            <VerticalStackLayout RadioButtonGroup.GroupName="monitor" HorizontalOptions="Center">
+                <Label Text="Monitor" TextColor="Black" HorizontalOptions="Center"/>
+                <RadioButton Content="Philips"/>
+                <RadioButton Content="NEC" />
+                <RadioButton Content="HP" />
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+        <Label Text="Yağmur Kaya 180201028" TextColor="White" FontSize="Subtitle" HorizontalTextAlignment="Center" />
+    </VerticalStackLayout>
+
+</ContentPage>

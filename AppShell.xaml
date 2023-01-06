@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Yagmur_180201028.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Yagmur_180201028"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+        <Tab Title="home" Icon="home_icon.png">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage"/>
+        </Tab>
+        <Tab Title="store" Icon="store_icon.png">
+            <ShellContent ContentTemplate="{DataTemplate local:Page2}" Route="Page2"/>
+        </Tab>
+        <Tab Title="shop" Icon="shop_icon.png">
+            <ShellContent ContentTemplate="{DataTemplate local:Page3}" Route="Page3"/>
+        </Tab>
+        <Tab Title="payment" Icon="payment_icon.png">
+            <ShellContent ContentTemplate="{DataTemplate local:Page4}" Route="Page4"/>
+        </Tab>
+    </TabBar>
+
+</Shell>

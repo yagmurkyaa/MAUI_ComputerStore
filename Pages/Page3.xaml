@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Yagmur_180201028.Page3"
+            
+    BackgroundColor="Red">
+    <VerticalStackLayout>
+        <VerticalStackLayout BackgroundColor="White"  Margin="20">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <BoxView Color="White" Grid.Row="0" Grid.Column="0" HeightRequest="15"/>
+
+                <Label  Text="Memory Size GB" TextColor="Black" FontSize="Title" HorizontalOptions="Center" Grid.Row="1" Grid.Column="0"/>
+                <HorizontalStackLayout HorizontalOptions="Center" Grid.Row="2" Grid.Column="0">
+                    <Stepper Minimum="4" 
+                             Maximum="16"
+                             Value="4"
+                             Increment="4"
+                             HorizontalOptions="Center"
+                             ValueChanged="Stepper_ValueChanged"/>
+
+                    <Label x:Name="stepperLabel"
+                           Text="    4"
+                           FontSize="Title"
+                           HorizontalOptions="Center"
+                           VerticalOptions="CenterAndExpand" />
+                </HorizontalStackLayout>
+
+                <BoxView Color="White" Grid.Row="3" Grid.Column="0" HeightRequest="30"/>
+
+                <Label  Text="Storage Size GB" TextColor="Black" FontSize="Title" HorizontalOptions="Center" Grid.Row="4" Grid.Column="0"/>
+                <HorizontalStackLayout HorizontalOptions="Center" Grid.Row="5" Grid.Column="0">
+                    <Stepper Minimum="500" 
+                             Maximum="1000"
+                             Value="500"
+                             Increment="500"
+                             HorizontalOptions="Center"
+                             ValueChanged="Stepper_ValueChanged_1"/>
+
+                    <Label x:Name="stepperLabel2"
+                           Text="    500"
+                           FontSize="Title"
+                           HorizontalOptions="Center"
+                           VerticalOptions="CenterAndExpand" />
+                </HorizontalStackLayout>
+
+                <BoxView Color="White" Grid.Row="6" Grid.Column="0" HeightRequest="30"/>
+
+                <Label  Text="Monitor Size in''" TextColor="Black" FontSize="Title" HorizontalOptions="Center" Grid.Row="7" Grid.Column="0"/>
+                <HorizontalStackLayout HorizontalOptions="Center" Grid.Row="8" Grid.Column="0">
+                    <Stepper Minimum="17" 
+                             Maximum="23"
+                             Value="17"
+                             Increment="3"
+                             HorizontalOptions="Center"
+                             ValueChanged="Stepper_ValueChanged_2"/>
+
+                    <Label x:Name="stepperLabel3"
+                           Text="    17"
+                           FontSize="Title"
+                           HorizontalOptions="Center"
+                           VerticalOptions="CenterAndExpand" />
+                </HorizontalStackLayout>
+
+                <BoxView Color="White" Grid.Row="9" Grid.Column="0" HeightRequest="30"/>
+
+                <HorizontalStackLayout HorizontalOptions="Center" Grid.Row="11" Grid.Column="0">
+                    <Label Text="Total" FontAttributes="Bold" FontSize="Subtitle" Margin="10"/>
+                    <Label x:Name="total" Text="{Binding Page4.TotalString}" FontAttributes="Bold" FontSize="Subtitle" WidthRequest="150"/>
+                </HorizontalStackLayout>
+            </Grid>
+        </VerticalStackLayout>
+        <Label Text="Yağmur Kaya 180201028" TextColor="White" FontSize="Subtitle" HorizontalTextAlignment="Center" />
+    </VerticalStackLayout>
+</ContentPage>
+

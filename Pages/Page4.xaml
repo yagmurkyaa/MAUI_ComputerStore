@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Yagmur_180201028.Page4"
+             BackgroundColor="Red">
+    <StackLayout>
+        <VerticalStackLayout BackgroundColor="White" Margin="20" Padding="20">
+            <Label Text="Cardholder Name"/>
+            <Entry x:Name="name"/>
+            <Label Text="Card No."/>
+            <Entry x:Name="cardNo"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Date" Grid.Row="0" Grid.Column="0" />
+                <Label Text="CVV" Grid.Row="0" Grid.Column="2" />
+                <Entry x:Name="date" Grid.Row="1" Grid.Column="0" />
+                <Entry x:Name="cvv" Grid.Row="1" Grid.Column="2" />
+            </Grid>
+
+            <RadioButton Content="Cache" IsChecked="True" />
+            <RadioButton Content="Installments"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="Total" FontAttributes="Bold" FontSize="Subtitle" Margin="10" HorizontalOptions="Center"/>
+                <Label x:Name="total" Text="{Binding Page4.TotalString}" FontAttributes="Bold" FontSize="Subtitle" WidthRequest="150" HorizontalOptions="Center"/>
+            </StackLayout>
+            <Button x:Name="pay_but" 
+                    Clicked="pay_but_Clicked"
+                    Text="Pay" 
+                    FontAttributes="Bold"
+                    FontSize="Subtitle" 
+                    BackgroundColor="Red" 
+                    HorizontalOptions="Center" 
+                    Padding="5" 
+                    WidthRequest="100" 
+                    HeightRequest="40" 
+                    BorderColor="Black" 
+                    BorderWidth="3"/>
+        </VerticalStackLayout>
+        <Label Text="Yağmur Kaya 180201028" TextColor="White" FontSize="Subtitle" HorizontalTextAlignment="Center" />
+
+
+    </StackLayout>
+</ContentPage>
